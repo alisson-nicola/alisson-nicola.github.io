@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alisson Nicola | Projetos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter, sans-serif;
+}
+
+body {
+background:#0b0f1a;
+color:white;
+}
+
+.container {
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+header {
+border-bottom:1px solid #1f2937;
+margin-bottom:30px;
+}
+
+h1 {
+font-size:32px;
+margin-bottom:10px;
+}
+
+.subtitle {
+opacity:.7;
+margin-bottom:30px;
+}
+
+.tabs {
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.tab {
+padding:10px 16px;
+background:#111827;
+border-radius:8px;
+cursor:pointer;
+opacity:.7;
+transition:.2s;
+}
+
+.tab:hover {
+opacity:1;
+}
+
+.tab.active {
+background:#2563eb;
+opacity:1;
+}
+
+.content {
+background:#111827;
+border-radius:16px;
+padding:30px;
+display:none;
+}
+
+.content.active {
+display:block;
+}
+
+.content img {
+width:100%;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.content h2 {
+margin-bottom:10px;
+}
+
+.content p {
+opacity:.8;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.btn {
+display:inline-block;
+padding:10px 16px;
+background:#2563eb;
+border-radius:8px;
+color:white;
+text-decoration:none;
+margin-right:10px;
+}
+
+.techs {
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.tech {
+background:#0b1220;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+}
+
+footer {
+margin-top:40px;
+opacity:.5;
+text-align:center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h1>Alisson Nicola</h1>
+<div class="subtitle">Desenvolvedor Full Stack — Projetos</div>
+</header>
+
+<div class="tabs">
+<div class="tab active" onclick="openTab('p1')">Sistema ERP</div>
+<div class="tab" onclick="openTab('p2')">Gerador de Contratos</div>
+<div class="tab" onclick="openTab('p3')">Dashboard Solar</div>
+<div class="tab" onclick="openTab('p4')">API Financeira</div>
+</div>
+
+<!-- Projeto 1 -->
+<div id="p1" class="content active">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200">
+
+<h2>Sistema ERP Empresarial</h2>
+
+<div class="techs">
+<div class="tech">Django</div>
+<div class="tech">React</div>
+<div class="tech">PostgreSQL</div>
+<div class="tech">Docker</div>
+</div>
+
+<p>
+Sistema ERP completo com controle de usuários, permissões RBAC,
+cadastro de clientes, relatórios e dashboard administrativo.
+Arquitetura baseada em API REST com frontend desacoplado.
+</p>
+
+<a class="btn" href="#">Ver Código</a>
+<a class="btn" href="#">Ver Demo</a>
+
+</div>
+
+<!-- Projeto 2 -->
+<div id="p2" class="content">
+
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200">
+
+<h2>Gerador de Contratos Automático</h2>
+
+<div class="techs">
+<div class="tech">Python</div>
+<div class="tech">Django</div>
+<div class="tech">DOCX</div>
+<div class="tech">PDF</div>
+</div>
+
+<p>
+Sistema para geração automática de contratos com templates DOCX,
+variáveis dinâmicas e exportação em PDF. Inclui histórico,
+versionamento e auditoria completa.
+</p>
+
+<a class="btn" href="#">Ver Código</a>
+<a class="btn" href="#">Ver Demo</a>
+
+</div>
+
+<!-- Projeto 3 -->
+<div id="p3" class="content">
+
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200">
+
+<h2>Dashboard Energia Solar</h2>
+
+<div class="techs">
+<div class="tech">React</div>
+<div class="tech">Charts</div>
+<div class="tech">API REST</div>
+</div>
+
+<p>
+Dashboard interativo para monitoramento de geração solar,
+economia mensal, consumo e desempenho dos inversores
+em tempo real.
+</p>
+
+<a class="btn" href="#">Ver Código</a>
+<a class="btn" href="#">Ver Demo</a>
+
+</div>
+
+<!-- Projeto 4 -->
+<div id="p4" class="content">
+
+<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200">
+
+<h2>API Financeira</h2>
+
+<div class="techs">
+<div class="tech">FastAPI</div>
+<div class="tech">PostgreSQL</div>
+<div class="tech">JWT</div>
+</div>
+
+<p>
+API para controle financeiro com autenticação JWT,
+lançamentos, categorias, relatórios e integração com
+sistemas externos.
+</p>
+
+<a class="btn" href="#">Ver Código</a>
+<a class="btn" href="#">Ver Demo</a>
+
+</div>
+
+<footer>
+© 2026 Alisson Nicola
+</footer>
+
+</div>
+
+<script>
+function openTab(id){
+
+document.querySelectorAll(".tab").forEach(tab=>{
+tab.classList.remove("active")
+})
+
+document.querySelectorAll(".content").forEach(content=>{
+content.classList.remove("active")
+})
+
+event.target.classList.add("active")
+document.getElementById(id).classList.add("active")
+
+}
+</script>
+
+</body>
+</html>
